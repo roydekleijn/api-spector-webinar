@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "id": "008ff832-6452-42b3-a50b-2a6dd0603370",
+  "name": "New Collection",
+  "description": "",
+  "rootFolder": {
+    "id": "4c945780-bf22-4e14-83c0-9761bc0c6a3b",
+    "name": "root",
+    "description": "",
+    "folders": [],
+    "requestIds": []
+  },
+  "requests": {}
+}

@@ -1,0 +1,74 @@
+{
+  "version": "1.0",
+  "id": "9a205acc-1c3b-43ca-acc3-a6bf1229a9cf",
+  "name": "New Flow",
+  "nodes": [
+    {
+      "id": "2a5a983b-03d4-4cbd-9b34-bb92e8b65f98",
+      "type": "start",
+      "position": {
+        "x": 80,
+        "y": 170
+      },
+      "config": {}
+    },
+    {
+      "id": "3821bcf1-6db2-4af4-ba43-85e9bc18a586",
+      "type": "end",
+      "position": {
+        "x": 923.5335301755888,
+        "y": 65.43940823982872
+      },
+      "config": {}
+    },
+    {
+      "id": "ac35259f-f817-4aea-8b3c-04cc604797cf",
+      "type": "request",
+      "position": {
+        "x": 205.05257293897225,
+        "y": 79.59077030810863
+      },
+      "config": {
+        "ref": {
+          "collectionId": "008ff832-6452-42b3-a50b-2a6dd0603370",
+          "requestId": "c2d1632a-efb3-419f-9ea9-d91d7557f7f0"
+        }
+      }
+    },
+    {
+      "id": "357b2aa3-48ab-4da8-8f26-ee20c60542a3",
+      "type": "request",
+      "position": {
+        "x": 523.6824740274526,
+        "y": 69.57186659773572
+      },
+      "config": {
+        "ref": {
+          "collectionId": "008ff832-6452-42b3-a50b-2a6dd0603370",
+          "requestId": "d4539f08-4cf4-4b48-8a73-6431551ca4af"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "bfe87c02-d2dc-437c-9b04-457629b72927",
+      "source": "2a5a983b-03d4-4cbd-9b34-bb92e8b65f98",
+      "target": "ac35259f-f817-4aea-8b3c-04cc604797cf",
+      "sourcePort": "out"
+    },
+    {
+      "id": "0b92a58b-8484-43a7-b9ab-452f82b07eb7",
+      "source": "ac35259f-f817-4aea-8b3c-04cc604797cf",
+      "target": "357b2aa3-48ab-4da8-8f26-ee20c60542a3",
+      "sourcePort": "success"
+    },
+    {
+      "id": "456e2561-71b5-4c63-9749-5610b1584cf1",
+      "source": "357b2aa3-48ab-4da8-8f26-ee20c60542a3",
+      "target": "3821bcf1-6db2-4af4-ba43-85e9bc18a586",
+      "sourcePort": "success",
+      "targetPort": "in"
+    }
+  ]
+}

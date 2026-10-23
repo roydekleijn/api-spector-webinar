@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "collections": [
+    "collections/practice-software-testing.spector",
+    "collections/wwwdneonlinecom.spector",
+    "collections/toolshop-api.spector"
+  ],
+  "environments": [
+    "environments/test.env.json"
+  ],
+  "activeEnvironmentId": null,
+  "settings": {
+    "theme": "light",
+    "zoom": 1.25,
+    "tls": {
+      "rejectUnauthorized": true
+    },
+    "piiMaskPatterns": [
+      "authorization",
+      "password",
+      "token",
+      "secret",
+      "api-key",
+      "x-api-key"
+    ],
+    "secrets": {
+      "vault": {
+        "address": "http://127.0.0.1:8200"
+      }
+    }
+  },
+  "mocks": [
+    "mocks/123c6894-af5a-44c8-a464-7f7dee6dfe88.mock.json"
+  ],
+  "flows": [
+    "flows/new-flow.flow.json"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "version": "1.0",
+  "id": "008ff832-6452-42b3-a50b-2a6dd0603370",
+  "name": "Practice Software Testing",
+  "description": "Hello **World**",
+  "rootFolder": {
+    "id": "4c945780-bf22-4e14-83c0-9761bc0c6a3b",
+    "name": "root",
+    "description": "",
+    "folders": [
+      {
+        "id": "2fa94af6-d774-451b-881b-0ac05facb314",
+        "name": "Authentication",
+        "description": "",
+        "folders": [],
+        "requestIds": [
+          "d05b39f9-ed81-47d3-8359-ff45af7285ae",
+          "219fd207-a6ff-4d5e-9f04-aafb70407407"
+        ]
+      }
+    ],
+    "requestIds": [
+      "31cd450f-fbf6-4fa1-8a2b-ac030e96d064",
+      "d4539f08-4cf4-4b48-8a73-6431551ca4af",
+      "4d2552af-a223-4366-af55-636f08c7a8d1",
+      "997062bb-8b54-4780-bf24-276daf3551fd",
+      "c2d1632a-efb3-419f-9ea9-d91d7557f7f0"
+    ]
+  },
+  "requests": {
+    "31cd450f-fbf6-4fa1-8a2b-ac030e96d064": {
+      "id": "31cd450f-fbf6-4fa1-8a2b-ac030e96d064",
+      "name": "Health check",
+      "method": "GET",
+      "url": "{{base_url}}/status",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "none"
+      },
+      "postRequestScript": "const json = sp.response.json();\n\nsp.test('version equals \"5.0\"', function() {\n  sp.expect(json.version).to.equal(\"5.0\");\n});"
+    },
+    "d4539f08-4cf4-4b48-8a73-6431551ca4af": {
+      "id": "d4539f08-4cf4-4b48-8a73-6431551ca4af",
+      "name": "Products",
+      "method": "GET",
+      "url": "{{base_url}}/products",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "none"
+      },
+      "postRequestScript": "const json = sp.response.json();\n\nsp.test('$.data[?(@.name==\"Combination Pliers\")].id equals \"01M5MA4DENWHWN6YSKNZQW3G39\"', function() {\n  const matches = sp.jsonPath(json, '$.data[?(@.name==\"Combination Pliers\")].id');\n  sp.expect(matches.length).to.be.above(0);\n  sp.expect(matches[0]).to.equal(\"01M5MA4DENWHWN6YSKNZQW3G39\");\n});"
+    },
+    "d05b39f9-ed81-47d3-8359-ff45af7285ae": {
+      "id": "d05b39f9-ed81-47d3-8359-ff45af7285ae",
+      "name": "Login",
+      "method": "POST",
+      "url": "{{base_url}}/users/login",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "json",
+        "json": "{\n  \"email\": \"customer2@practicesoftwaretesting.com\",\n  \"password\": \"{{vault:secret/data/login#password}}\"\n}"
+      },
+      "postRequestScript": "const json = sp.response.json();\n\nsp.variables.set(\"access_token\", String(json.access_token));",
+      "hookType": "beforeAll"
+    },
+    "219fd207-a6ff-4d5e-9f04-aafb70407407": {
+      "id": "219fd207-a6ff-4d5e-9f04-aafb70407407",
+      "name": "Invoices",
+      "method": "GET",
+      "url": "{{base_url}}/invoices",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "type": "bearer",
+        "token": "{{access_token}}"
+      },
+      "body": {
+        "mode": "none"
+      },
+      "postRequestScript": "const json = sp.response.json();\n\nsp.test('total exists', function() {\n  sp.expect(json.total).to.not.be.oneOf([null, undefined]);\n});"
+    },
+    "4d2552af-a223-4366-af55-636f08c7a8d1": {
+      "id": "4d2552af-a223-4366-af55-636f08c7a8d1",
+      "name": "GraphQL products",
+      "method": "POST",
+      "url": "https://api.practicesoftwaretesting.com/graphql",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "graphql",
+        "graphql": {
+          "query": "{ products { data { name price } } }",
+          "variables": ""
+        }
+      }
+    },
+    "997062bb-8b54-4780-bf24-276daf3551fd": {
+      "id": "997062bb-8b54-4780-bf24-276daf3551fd",
+      "name": "Mock check",
+      "method": "GET",
+      "url": "http://127.0.0.1:3005/status",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "none"
+      }
+    },
+    "c2d1632a-efb3-419f-9ea9-d91d7557f7f0": {
+      "id": "c2d1632a-efb3-419f-9ea9-d91d7557f7f0",
+      "name": "Flow ping",
+      "method": "GET",
+      "url": "https://api.practicesoftwaretesting.com/status",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "none"
+      }
+    }
+  },
+  "collectionVariables": {
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5wcmFjdGljZXNvZnR3YXJldGVzdGluZy5jb20vdXNlcnMvbG9naW4iLCJpYXQiOjE3OTI3NTc1ODgsImV4cCI6MTc5Mjc1Nzg4OCwibmJmIjoxNzkyNzU3NTg4LCJqdGkiOiJ3aXZlNm4zWVc0aUlTN2lCIiwic3ViIjoiMDFNNU1BNEQ1WEc5NjU2UUJEMERRWjQ0TkMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6InVzZXIifQ.oKH5jsgK8k3uH44xhU5tzWLtKMBe_7ZpPWRLu0uXHno"
+  }
+}

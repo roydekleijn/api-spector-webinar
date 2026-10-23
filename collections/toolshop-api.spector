@@ -1,0 +1,140 @@
+{
+  "version": "1.0",
+  "id": "a3a373fc-6dee-47e5-ad97-a3c8dca8d198",
+  "name": "Toolshop API",
+  "description": "Toolshop REST API technical description",
+  "rootFolder": {
+    "id": "91565a65-d7ca-48aa-915d-b3e513a3d49a",
+    "name": "root",
+    "description": "",
+    "folders": [
+      {
+        "id": "f7f46b9f-6926-48fe-a267-5fa82280405e",
+        "name": "Brand",
+        "description": "Brand",
+        "folders": [],
+        "requestIds": [
+          "ad8ff689-c1a8-4f9a-a78c-3b6bb9c30616",
+          "360e7f0a-9f29-48d1-9bf8-37e2aeed079c",
+          "491f3eaf-de01-48a1-9356-7fbbd1c37678",
+          "803c175a-59c1-46dd-9e54-1140d5cf07ef"
+        ]
+      }
+    ],
+    "requestIds": []
+  },
+  "requests": {
+    "ad8ff689-c1a8-4f9a-a78c-3b6bb9c30616": {
+      "id": "ad8ff689-c1a8-4f9a-a78c-3b6bb9c30616",
+      "name": "Retrieve all brands",
+      "method": "GET",
+      "url": "{{baseUrl}}/brands",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "none"
+      },
+      "description": "Retrieve all brands",
+      "meta": {
+        "tags": [
+          "Brand"
+        ],
+        "operationId": "getBrands"
+      },
+      "schema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"title\": \"BrandResponse\",\n    \"properties\": {\n      \"id\": {\n        \"type\": \"string\"\n      },\n      \"name\": {\n        \"type\": \"string\",\n        \"example\": \"new brand\"\n      },\n      \"slug\": {\n        \"type\": \"string\",\n        \"example\": \"new-brand\"\n      }\n    },\n    \"type\": \"object\"\n  }\n}"
+    },
+    "360e7f0a-9f29-48d1-9bf8-37e2aeed079c": {
+      "id": "360e7f0a-9f29-48d1-9bf8-37e2aeed079c",
+      "name": "Partially update specific brand",
+      "method": "PATCH",
+      "url": "{{baseUrl}}/brands/{{brandId}}",
+      "headers": [],
+      "params": [
+        {
+          "key": "brandId",
+          "value": "1",
+          "enabled": true,
+          "description": "The brandId parameter in path",
+          "paramType": "path"
+        }
+      ],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "json",
+        "json": "{\n  \"name\": \"new brand\",\n  \"slug\": \"new-brand\"\n}"
+      },
+      "description": "Partially update specific brand",
+      "meta": {
+        "tags": [
+          "Brand"
+        ],
+        "operationId": "patchBrand"
+      },
+      "schema": "{\n  \"title\": \"UpdateResponse\",\n  \"properties\": {\n    \"success\": {\n      \"type\": \"boolean\",\n      \"example\": true\n    }\n  },\n  \"type\": \"object\"\n}"
+    },
+    "491f3eaf-de01-48a1-9356-7fbbd1c37678": {
+      "id": "491f3eaf-de01-48a1-9356-7fbbd1c37678",
+      "name": "Delete specific brand",
+      "method": "DELETE",
+      "url": "{{baseUrl}}/brands/{{brandId}}",
+      "headers": [],
+      "params": [
+        {
+          "key": "brandId",
+          "value": "1",
+          "enabled": true,
+          "description": "The brandId parameter in path",
+          "paramType": "path"
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "token": ""
+      },
+      "body": {
+        "mode": "none"
+      },
+      "description": "Admin role is required to delete a specific brand",
+      "meta": {
+        "tags": [
+          "Brand"
+        ],
+        "operationId": "deleteBrand"
+      }
+    },
+    "803c175a-59c1-46dd-9e54-1140d5cf07ef": {
+      "id": "803c175a-59c1-46dd-9e54-1140d5cf07ef",
+      "name": "Retrieve specific brands matching the search query",
+      "method": "GET",
+      "url": "{{baseUrl}}/brands/search",
+      "headers": [],
+      "params": [
+        {
+          "key": "q",
+          "value": "string",
+          "enabled": true,
+          "description": "A query phrase"
+        }
+      ],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "none"
+      },
+      "description": "Search is performed on the `name` column",
+      "meta": {
+        "tags": [
+          "Brand"
+        ],
+        "operationId": "searchBrand"
+      },
+      "schema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"title\": \"BrandResponse\",\n    \"properties\": {\n      \"id\": {\n        \"type\": \"string\"\n      },\n      \"name\": {\n        \"type\": \"string\",\n        \"example\": \"new brand\"\n      },\n      \"slug\": {\n        \"type\": \"string\",\n        \"example\": \"new-brand\"\n      }\n    },\n    \"type\": \"object\"\n  }\n}"
+    }
+  }
+}

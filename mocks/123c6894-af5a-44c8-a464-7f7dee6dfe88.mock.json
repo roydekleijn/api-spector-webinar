@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "id": "123c6894-af5a-44c8-a464-7f7dee6dfe88",
+  "name": "Demo mock",
+  "port": 3005,
+  "routes": [
+    {
+      "id": "ba2f39b9-e0fe-47d9-a3c0-b9f46338190e",
+      "method": "GET",
+      "path": "/status",
+      "statusCode": 200,
+      "headers": {},
+      "body": "{\"version\":\"MOCKED-9.9\",\"environment\":\"mock\",\"app_name\":\"Toolshop (mock)\"}"
+    }
+  ]
+}

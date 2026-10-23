@@ -1,0 +1,288 @@
+{
+  "version": "1.0",
+  "id": "d2189820-6058-4308-9042-263e898be626",
+  "name": "www.dneonline.com",
+  "description": "",
+  "rootFolder": {
+    "id": "28668a5e-05e1-4046-a9fa-72e7f15b3ea5",
+    "name": "root",
+    "description": "",
+    "folders": [],
+    "requestIds": [
+      "dcad44e5-0680-4b17-b3b5-3afab8e8c868",
+      "e631fd26-86ae-4819-b1ef-b0985bb18596",
+      "b8db25f6-205c-49f2-aa78-2d229c068436",
+      "38713fbd-380c-4dea-9c65-4915de32a34a",
+      "19af5af8-9ea0-4f3d-9e60-c89dec0fdfd4",
+      "aa2b5da4-1ec0-4140-9e39-4ee02a4f6b28",
+      "27c6d914-0363-4ceb-b0a1-4a0ce3afe366",
+      "de7b53b2-35a1-401c-acc7-fa13f11afbaf"
+    ]
+  },
+  "requests": {
+    "dcad44e5-0680-4b17-b3b5-3afab8e8c868": {
+      "id": "dcad44e5-0680-4b17-b3b5-3afab8e8c868",
+      "name": "Add (1.1)",
+      "method": "POST",
+      "url": "{{baseUrl}}/calculator.asmx",
+      "protocol": "soap",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "key": "SOAPAction",
+          "value": "http://tempuri.org/Add",
+          "enabled": true
+        }
+      ],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "soap",
+        "soap": {
+          "wsdlUrl": "",
+          "operationName": "Add",
+          "soapVersion": "1.1",
+          "binding": "CalculatorSoap",
+          "soapAction": "http://tempuri.org/Add",
+          "envelope": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n  xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"\n  xmlns:tns=\"http://tempuri.org/\">\n  <soap:Header/>\n  <soap:Body>\n    <tns:Add>\n      <tns:intA><!-- int --></tns:intA>\n      <tns:intB><!-- int --></tns:intB>\n    </tns:Add>\n  </soap:Body>\n</soap:Envelope>"
+        }
+      },
+      "description": "SOAPAction: http://tempuri.org/Add"
+    },
+    "e631fd26-86ae-4819-b1ef-b0985bb18596": {
+      "id": "e631fd26-86ae-4819-b1ef-b0985bb18596",
+      "name": "Subtract (1.1)",
+      "method": "POST",
+      "url": "{{baseUrl}}/calculator.asmx",
+      "protocol": "soap",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "key": "SOAPAction",
+          "value": "http://tempuri.org/Subtract",
+          "enabled": true
+        }
+      ],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "soap",
+        "soap": {
+          "wsdlUrl": "",
+          "operationName": "Subtract",
+          "soapVersion": "1.1",
+          "binding": "CalculatorSoap",
+          "soapAction": "http://tempuri.org/Subtract",
+          "envelope": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n  xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"\n  xmlns:tns=\"http://tempuri.org/\">\n  <soap:Header/>\n  <soap:Body>\n    <tns:Subtract>\n      <tns:intA><!-- int --></tns:intA>\n      <tns:intB><!-- int --></tns:intB>\n    </tns:Subtract>\n  </soap:Body>\n</soap:Envelope>"
+        }
+      },
+      "description": "SOAPAction: http://tempuri.org/Subtract"
+    },
+    "b8db25f6-205c-49f2-aa78-2d229c068436": {
+      "id": "b8db25f6-205c-49f2-aa78-2d229c068436",
+      "name": "Multiply (1.1)",
+      "method": "POST",
+      "url": "{{baseUrl}}/calculator.asmx",
+      "protocol": "soap",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "key": "SOAPAction",
+          "value": "http://tempuri.org/Multiply",
+          "enabled": true
+        }
+      ],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "soap",
+        "soap": {
+          "wsdlUrl": "",
+          "operationName": "Multiply",
+          "soapVersion": "1.1",
+          "binding": "CalculatorSoap",
+          "soapAction": "http://tempuri.org/Multiply",
+          "envelope": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n  xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"\n  xmlns:tns=\"http://tempuri.org/\">\n  <soap:Header/>\n  <soap:Body>\n    <tns:Multiply>\n      <tns:intA><!-- int --></tns:intA>\n      <tns:intB><!-- int --></tns:intB>\n    </tns:Multiply>\n  </soap:Body>\n</soap:Envelope>"
+        }
+      },
+      "description": "SOAPAction: http://tempuri.org/Multiply"
+    },
+    "38713fbd-380c-4dea-9c65-4915de32a34a": {
+      "id": "38713fbd-380c-4dea-9c65-4915de32a34a",
+      "name": "Divide (1.1)",
+      "method": "POST",
+      "url": "{{baseUrl}}/calculator.asmx",
+      "protocol": "soap",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "key": "SOAPAction",
+          "value": "http://tempuri.org/Divide",
+          "enabled": true
+        }
+      ],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "soap",
+        "soap": {
+          "wsdlUrl": "",
+          "operationName": "Divide",
+          "soapVersion": "1.1",
+          "binding": "CalculatorSoap",
+          "soapAction": "http://tempuri.org/Divide",
+          "envelope": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n  xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"\n  xmlns:tns=\"http://tempuri.org/\">\n  <soap:Header/>\n  <soap:Body>\n    <tns:Divide>\n      <tns:intA><!-- int --></tns:intA>\n      <tns:intB><!-- int --></tns:intB>\n    </tns:Divide>\n  </soap:Body>\n</soap:Envelope>"
+        }
+      },
+      "description": "SOAPAction: http://tempuri.org/Divide"
+    },
+    "19af5af8-9ea0-4f3d-9e60-c89dec0fdfd4": {
+      "id": "19af5af8-9ea0-4f3d-9e60-c89dec0fdfd4",
+      "name": "Add (1.2)",
+      "method": "POST",
+      "url": "{{baseUrl}}/calculator.asmx",
+      "protocol": "soap",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/soap+xml; charset=utf-8",
+          "enabled": true
+        }
+      ],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "soap",
+        "soap": {
+          "wsdlUrl": "",
+          "operationName": "Add",
+          "soapVersion": "1.2",
+          "binding": "CalculatorSoap12",
+          "soapAction": "http://tempuri.org/Add",
+          "envelope": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n  xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n  xmlns:tns=\"http://tempuri.org/\">\n  <soap:Header/>\n  <soap:Body>\n    <tns:Add>\n      <tns:intA>4</tns:intA>\n      <tns:intB>3</tns:intB>\n    </tns:Add>\n  </soap:Body>\n</soap:Envelope>"
+        }
+      },
+      "description": "SOAPAction: http://tempuri.org/Add",
+      "postRequestScript": "sp.test('soap:Body > AddResponse > AddResult equals \"7\"', function() {\n  sp.expect(sp.response.xmlText(\"soap:Body > AddResponse > AddResult\")).to.equal(\"7\");\n});"
+    },
+    "aa2b5da4-1ec0-4140-9e39-4ee02a4f6b28": {
+      "id": "aa2b5da4-1ec0-4140-9e39-4ee02a4f6b28",
+      "name": "Subtract (1.2)",
+      "method": "POST",
+      "url": "{{baseUrl}}/calculator.asmx",
+      "protocol": "soap",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/soap+xml; charset=utf-8",
+          "enabled": true
+        }
+      ],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "soap",
+        "soap": {
+          "wsdlUrl": "",
+          "operationName": "Subtract",
+          "soapVersion": "1.2",
+          "binding": "CalculatorSoap12",
+          "soapAction": "http://tempuri.org/Subtract",
+          "envelope": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n  xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n  xmlns:tns=\"http://tempuri.org/\">\n  <soap:Header/>\n  <soap:Body>\n    <tns:Subtract>\n      <tns:intA><!-- int --></tns:intA>\n      <tns:intB><!-- int --></tns:intB>\n    </tns:Subtract>\n  </soap:Body>\n</soap:Envelope>"
+        }
+      },
+      "description": "SOAPAction: http://tempuri.org/Subtract"
+    },
+    "27c6d914-0363-4ceb-b0a1-4a0ce3afe366": {
+      "id": "27c6d914-0363-4ceb-b0a1-4a0ce3afe366",
+      "name": "Multiply (1.2)",
+      "method": "POST",
+      "url": "{{baseUrl}}/calculator.asmx",
+      "protocol": "soap",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/soap+xml; charset=utf-8",
+          "enabled": true
+        }
+      ],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "soap",
+        "soap": {
+          "wsdlUrl": "",
+          "operationName": "Multiply",
+          "soapVersion": "1.2",
+          "binding": "CalculatorSoap12",
+          "soapAction": "http://tempuri.org/Multiply",
+          "envelope": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n  xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n  xmlns:tns=\"http://tempuri.org/\">\n  <soap:Header/>\n  <soap:Body>\n    <tns:Multiply>\n      <tns:intA><!-- int --></tns:intA>\n      <tns:intB><!-- int --></tns:intB>\n    </tns:Multiply>\n  </soap:Body>\n</soap:Envelope>"
+        }
+      },
+      "description": "SOAPAction: http://tempuri.org/Multiply"
+    },
+    "de7b53b2-35a1-401c-acc7-fa13f11afbaf": {
+      "id": "de7b53b2-35a1-401c-acc7-fa13f11afbaf",
+      "name": "Divide (1.2)",
+      "method": "POST",
+      "url": "{{baseUrl}}/calculator.asmx",
+      "protocol": "soap",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/soap+xml; charset=utf-8",
+          "enabled": true
+        }
+      ],
+      "params": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "mode": "soap",
+        "soap": {
+          "wsdlUrl": "",
+          "operationName": "Divide",
+          "soapVersion": "1.2",
+          "binding": "CalculatorSoap12",
+          "soapAction": "http://tempuri.org/Divide",
+          "envelope": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n  xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n  xmlns:tns=\"http://tempuri.org/\">\n  <soap:Header/>\n  <soap:Body>\n    <tns:Divide>\n      <tns:intA><!-- int --></tns:intA>\n      <tns:intB><!-- int --></tns:intB>\n    </tns:Divide>\n  </soap:Body>\n</soap:Envelope>"
+        }
+      },
+      "description": "SOAPAction: http://tempuri.org/Divide"
+    }
+  },
+  "collectionVariables": {
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5wcmFjdGljZXNvZnR3YXJldGVzdGluZy5jb20vdXNlcnMvbG9naW4iLCJpYXQiOjE3OTI3NTc1ODgsImV4cCI6MTc5Mjc1Nzg4OCwibmJmIjoxNzkyNzU3NTg4LCJqdGkiOiJ3aXZlNm4zWVc0aUlTN2lCIiwic3ViIjoiMDFNNU1BNEQ1WEc5NjU2UUJEMERRWjQ0TkMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6InVzZXIifQ.oKH5jsgK8k3uH44xhU5tzWLtKMBe_7ZpPWRLu0uXHno"
+  }
+}
